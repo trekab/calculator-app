@@ -13,25 +13,25 @@ The designs were created to the following widths:
 
 #### Backgrounds
 
-- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
-- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
-- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+- Very dark desaturated blue (main background): hsl(222, 26%, 31%) //main-bg
+- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%) //keypad-bg
+- Very dark desaturated blue (screen background): hsl(224, 36%, 15%) //display-bg
 
 #### Keys
 
-- Desaturated dark blue (key background): hsl(225, 21%, 49%)
-- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+- Desaturated dark blue (key background): hsl(225, 21%, 49%) //key-bg
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%) //key-shadow
 
-- Red (key background, toggle): hsl(6, 63%, 50%)
-- Dark red (key shadow): hsl(6, 70%, 34%)
+- Red (key background, toggle): hsl(6, 63%, 50%) //key-bg-two
+- Dark red (key shadow): hsl(6, 70%, 34%)//key-shadow-two
 
-- Light grayish orange (key background): hsl(30, 25%, 89%)
-- Grayish orange (key shadow): hsl(28, 16%, 65%)
+- Light grayish orange (key background): hsl(30, 25%, 89%) //key-bg-light
+- Grayish orange (key shadow): hsl(28, 16%, 65%) //key-bg-light-shadow
 
 #### Text
 
-- Very dark grayish blue: hsl(221, 14%, 31%)
-- White: hsl(0, 0, 100%)
+- Very dark grayish blue: hsl(221, 14%, 31%) // text-dark
+- White: hsl(0, 0, 100%) // text-light
 
 ### Theme 2
 

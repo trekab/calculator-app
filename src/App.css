@@ -1,38 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+  --key-bg: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --key-bg-two: hsl(6, 63%, 50%);
+  --key-shadow-two: hsl(6, 70%, 34%);
+  --key-bg-light: hsl(30, 25%, 89%);
+  --key-bg-light-shadow: hsl(28, 16%, 65%);
+  --text-dark: hsl(221, 14%, 31%);
+  --text-light: #ffffff;
+  --text-very-dark: hsl(198, 20%, 13%);
+  --text-color: #ffffff;
+  --equals-color: #ffffff;
+  --hover-primary: #a2b2e1;
+  --hover-secondary: #f96b5b;
+  --btn-hover: #fffffe;
+}
+
+body[data-theme="theme-one"] {
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+  --key-bg: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --key-bg-two: hsl(6, 63%, 50%);
+  --key-shadow-two: hsl(6, 70%, 34%);
+  --key-bg-light: hsl(30, 25%, 89%);
+  --key-bg-light-shadow: hsl(28, 16%, 65%);
+  --text-dark: hsl(221, 14%, 31%);
+  --text-light: #ffffff;
+  --text-color: #ffffff;
+  --equals-color: #ffffff;
+  --hover-primary: #a2b2e1;
+  --hover-secondary: #f96b5b;
+  --btn-hover: #fffffe;
+}
+
+body[data-theme="theme-two"] {
+  --main-bg: hsl(0, 0%, 90%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --display-bg: hsl(0, 0%, 93%);
+  --key-bg: hsl(185, 42%, 37%);
+  --key-shadow: hsl(185, 58%, 25%);
+  --key-bg-two: hsl(25, 98%, 40%);
+  --key-shadow-two: hsl(25, 99%, 27%);
+  --key-bg-light: hsl(45, 7%, 89%);
+  --key-bg-light-shadow: hsl(35, 11%, 61%);
+  --text-dark: hsl(60, 10%, 19%);
+  --text-light: #ffffff;
+  --text-color: hsl(198, 20%, 13%);
+  --equals-color: #ffffff;
+  --hover-primary: #62b5bc;
+  --hover-secondary: #ff8a38;
+  --btn-hover: #ffffff;
+}
+
+body[data-theme="theme-three"] {
+  --main-bg: hsl(268, 75%, 9%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --display-bg: hsl(268, 71%, 12%);
+  --key-bg: hsl(281, 89%, 26%);
+  --key-shadow: hsl(285, 91%, 52%);
+  --key-bg-two: hsl(176, 100%, 44%);
+  --key-shadow-two: hsl(177, 92%, 70%);
+  --key-bg-light: hsl(268, 47%, 21%);
+  --key-bg-light-shadow: hsl(290, 70%, 36%);
+  --text-dark: hsl(52, 100%, 62%);
+  --text-light: #ffffff;
+  --text-color: #ffe53d;
+  --equals-color: hsl(198, 20%, 13%);
+  --hover-primary: #8631af;
+  --hover-secondary: #93fff8;
+  --btn-hover: #6c34ac;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
 .App {
-  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  padding: 24px;
+  width: 375px;
+  height: 667px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-bg);
+  color: var(--text-dark);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header,
+.header-toggle {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.theme-label {
+  font-size: 12px;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  margin-top: 14px;
+}
+
+.header-toggle {
+  width: 139px;
+  height: 42px;
+}
+
+.slidecontainer {
+  width: 71px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background-color: var(--keypad-bg);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50px;
+  background: var(--key-bg-two);
+  cursor: pointer;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  background: var(--key-bg-two);
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.display {
+  background-color: var(--display-bg);
+  width: 327px;
+  height: 88px;
+  border-radius: 10px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 36.8px;
+  letter-spacing: -0.67px;
+  padding: 29px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.buttons {
+  width: 327px;
+  height: 420px;
+  background-color: var(--keypad-bg);
+  border-radius: 10px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 13px;
+}
+
+.button {
+  font-family: "League Spartan", sans-serif;
+  width: 60px;
+  height: 64px;
+  background-color: var(--key-bg-light);
+  color: var(--text-dark);
+  border-radius: 5px;
+  font-size: 32px;
+  line-height: 29px;
+  font-weight: 700;
+  border: none;
+  box-shadow: inset 0px -4px 0px var(--key-bg-light-shadow);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: var(--btn-hover);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.del-btn {
+  background-color: var(--key-bg);
+  font-size: 20px;
+  color: var(--text-light);
+  box-shadow: inset 0px -4px 0px var(--key-shadow);
+}
+
+.reset-btn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 133px;
+  font-size: 20px;
+  background-color: var(--key-bg);
+  color: var(--text-light);
+  box-shadow: inset 0px -4px 0px var(--key-shadow);
+}
+
+.reset-btn:hover,
+.del-btn:hover {
+  background-color: var(--hover-primary);
+  cursor: pointer;
+}
+
+.equals-btn {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  width: 133px;
+  font-size: 20px;
+  background-color: var(--key-bg-two);
+  color: var(--equals-color);
+  box-shadow: inset 0px -4px 0px var(--key-shadow-two);
+}
+
+.equals-btn:hover {
+  background-color: var(--hover-secondary);
+}
+.slider::-webkit-slider-thumb:hover {
+  background-color: var(--hover-secondary);
+}
+
+.slider::-moz-range-thumb:hover {
+  background-color: var(--hover-secondary);
+}
+
+@media (min-width: 375px) {
+  .App {
+    width: 564px;
+    height: 706px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .display {
+    width: 100%;
+    height: 128px;
+    font-size: 56px;
+  }
+
+  .buttons {
+    width: 100%;
+    height: 480px;
+  }
+
+  .button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 40px;
+  }
+
+  .equals-btn,
+  .reset-btn,
+  .del-btn {
+    width: 100%;
+    font-size: 28px;
   }
 }
