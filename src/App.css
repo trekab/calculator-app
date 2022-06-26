@@ -15,6 +15,8 @@
   --text-very-dark: hsl(198, 20%, 13%);
   --text-color: #ffffff;
   --equals-color: #ffffff;
+  --hover-primary: #a2b2e1;
+  --hover-secondary: #f96b5b;
 }
 
 body[data-theme="theme-one"] {
@@ -31,6 +33,8 @@ body[data-theme="theme-one"] {
   --text-light: #ffffff;
   --text-color: #ffffff;
   --equals-color: #ffffff;
+  --hover-primary: #a2b2e1;
+  --hover-secondary: #f96b5b;
 }
 
 body[data-theme="theme-two"] {
@@ -47,6 +51,8 @@ body[data-theme="theme-two"] {
   --text-light: #ffffff;
   --text-color: hsl(198, 20%, 13%);
   --equals-color: #ffffff;
+  --hover-primary: #62b5bc;
+  --hover-secondary: #ff8a38;
 }
 
 body[data-theme="theme-three"] {
@@ -63,6 +69,8 @@ body[data-theme="theme-three"] {
   --text-light: #ffffff;
   --text-color: #ffe53d;
   --equals-color: hsl(198, 20%, 13%);
+  --hover-primary: #8631af;
+  --hover-secondary: #93fff8;
 }
 
 * {
@@ -104,7 +112,7 @@ body[data-theme="theme-three"] {
   height: 42px;
 }
 
-input {
+/* input {
   height: 16px;
   width: 16px;
   appearance: none;
@@ -133,6 +141,25 @@ input {
 
 #one {
   opacity: 1;
+} */
+
+.slidecontainer {
+  width: 71px;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background-color: var(--keypad-bg);
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 50px;
+  padding: 6px;
+  cursor: pointer;
 }
 
 .display {
@@ -196,6 +223,12 @@ input {
   box-shadow: inset 0px -4px 0px var(--key-shadow);
 }
 
+.reset-btn:hover,
+.del-btn:hover {
+  background-color: var(--hover-primary);
+  cursor: pointer;
+}
+
 .equals-btn {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -204,4 +237,9 @@ input {
   background-color: var(--key-bg-two);
   color: var(--equals-color);
   box-shadow: inset 0px -4px 0px var(--key-shadow-two);
+}
+
+.equals-btn:hover {
+  background-color: var(--hover-secondary);
+  cursor: pointer;
 }

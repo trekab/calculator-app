@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
+  const [themeValue, setThemeValue] = useState(0);
+  const themes = ["theme-one", "theme-two", "theme-three"];
+
+  const handleThemeChange = (e) => {
+    setThemeValue(e.target.value);
+  };
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", themes[themeValue]);
+  }, [themeValue]);
+
   return (
     <div className="header">
       <h1>calc</h1>
       <div className="header-toggle">
         <span className="theme-label">THEME</span>
-        <div className="tri-state-toggle">
+        {/* <div className="tri-state-toggle">
           <label>1</label>
           <input type="radio" name="toggle" id="one" />
           <label>2</label>
           <input type="radio" name="toggle" id="two" />
           <label>3</label>
           <input type="radio" name="toggle" id="three" />
+        </div> */}
+        <div className="slidecontainer">
+          <input
+            type="range"
+            min="0"
+            max="2"
+            value={themeValue}
+            className="slider"
+            id="myRange"
+            onChange={handleThemeChange}
+          />
         </div>
       </div>
     </div>
