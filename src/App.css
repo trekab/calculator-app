@@ -1,38 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  padding: 24px;
+  width: 375px;
+  height: 667px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(222, 26%, 31%);
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header,
+.header-toggle {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.theme-label {
+  font-size: 12px;
+  line-height: 11.04px;
+  letter-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-toggle {
+  width: 139px;
+  height: 42px;
+}
+
+input {
+  height: 16px;
+  width: 16px;
+  appearance: none;
+  background-color: #d03f2f;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.tri-state-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50px;
+  width: 71px;
+  height: 26px;
+  background-color: #242d44;
+}
+
+.tri-state-toggle label {
+  position: relative;
+  top: -20px;
+  left: 8px;
+  font-size: 12px;
+  line-height: 11.04px;
+}
+
+#one {
+  opacity: 1;
+}
+
+.display {
+  background-color: #181f33;
+  width: 327px;
+  height: 88px;
+  border-radius: 10px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 36.8px;
+  letter-spacing: -0.67px;
+  padding: 29px;
+  text-align: right;
+}
+
+.buttons {
+  width: 327px;
+  height: 420px;
+  background-color: #242d44;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.button {
+  width: 60px;
+  height: 64px;
+  background-color: #eae3dc;
+  color: #434a59;
+  border-radius: 5px;
+  font-size: 32px;
 }
