@@ -93,6 +93,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
+- [An Easy Way to Add Multiple Themes in a React App](https://javascript.plainenglish.io/easy-way-to-add-multiple-themes-in-react-app-ff45eeca67cb)
+
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
