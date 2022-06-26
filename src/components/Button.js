@@ -1,8 +1,13 @@
 import React from "react";
 
-const Button = ({ buttonName, className }) => {
+const Button = ({ buttonName, className, clickHandler }) => {
   return (
-    <button className={`button ${className ? className : ""}`}>
+    <button
+      className={`button ${className ? className : ""}`}
+      onClick={() => {
+        clickHandler(buttonName);
+      }}
+    >
       {buttonName}
     </button>
   );

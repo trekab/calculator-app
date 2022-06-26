@@ -182,6 +182,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .buttons {
