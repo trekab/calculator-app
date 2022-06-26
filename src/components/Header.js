@@ -26,13 +26,17 @@ const Header = () => {
           <input type="radio" name="toggle" id="three" />
         </div> */}
         <div className="slidecontainer">
+          <div className="slider-labels">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
           <input
             type="range"
             min="0"
             max="2"
             value={themeValue}
             className="slider"
-            id="myRange"
             onChange={handleThemeChange}
           />
         </div>

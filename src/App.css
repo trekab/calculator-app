@@ -105,6 +105,7 @@ body[data-theme="theme-three"] {
   font-size: 12px;
   line-height: 11.04px;
   letter-spacing: 1px;
+  margin-top: 14px;
 }
 
 .header-toggle {
@@ -158,8 +159,35 @@ body[data-theme="theme-three"] {
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
   border-radius: 50px;
-  padding: 6px;
+  padding: 5px;
   cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 17px; /* Set a specific slider handle width */
+  height: 17px; /* Slider handle height */
+  border-radius: 50px;
+  background: var(--key-bg-two); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 17px; /* Set a specific slider handle width */
+  height: 17px; /* Slider handle height */
+  background: var(--key-bg-two); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50px;
+  border: none;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .display {
@@ -204,6 +232,7 @@ body[data-theme="theme-three"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .del-btn {
@@ -241,5 +270,11 @@ body[data-theme="theme-three"] {
 
 .equals-btn:hover {
   background-color: var(--hover-secondary);
-  cursor: pointer;
+}
+.slider::-webkit-slider-thumb:hover {
+  background-color: var(--hover-secondary);
+}
+
+.slider::-moz-range-thumb:hover {
+  background-color: var(--hover-secondary);
 }
