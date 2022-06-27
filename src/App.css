@@ -91,7 +91,9 @@ body {
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
   padding: 24px;
-  width: 375px;
+  width: 100%;
+  min-width: 300px;
+  /* max-width: 375px; */
   height: 667px;
   position: absolute;
   top: 50%;
@@ -169,7 +171,8 @@ body {
 
 .display {
   background-color: var(--display-bg);
-  width: 327px;
+  /* width: 327px; */
+  width: 100%;
   height: 88px;
   border-radius: 10px;
   margin-top: 24px;
@@ -182,11 +185,12 @@ body {
   justify-content: flex-end;
   align-items: center;
   color: var(--text-color);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .buttons {
-  width: 327px;
+  /* width: 327px; */
+  width: 100%;
   height: 420px;
   background-color: var(--keypad-bg);
   border-radius: 10px;
@@ -199,7 +203,8 @@ body {
 
 .button {
   font-family: "League Spartan", sans-serif;
-  width: 60px;
+  /* width: 60px; */
+  width: 100%;
   height: 64px;
   background-color: var(--key-bg-light);
   color: var(--text-dark);
@@ -229,7 +234,8 @@ body {
 .reset-btn {
   grid-column-start: 1;
   grid-column-end: 3;
-  width: 133px;
+  width: 100%;
+  /* width: 133px; */
   font-size: 20px;
   background-color: var(--key-bg);
   color: var(--text-light);
@@ -245,7 +251,8 @@ body {
 .equals-btn {
   grid-column-start: 3;
   grid-column-end: 5;
-  width: 133px;
+  /* width: 133px; */
+  width: 100%;
   font-size: 20px;
   background-color: var(--key-bg-two);
   color: var(--equals-color);
@@ -265,7 +272,7 @@ body {
 
 @media (min-width: 375px) {
   .App {
-    width: 564px;
+    max-width: 564px;
     height: 706px;
   }
 
