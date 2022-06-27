@@ -5,6 +5,20 @@ const calculate = (data, btnName) => {
 
   switch (btnName) {
     case "DEL":
+      let result = total;
+      if (total.toString().length > 1) {
+        let strArr = total.toString().split("");
+        strArr.pop();
+        result = parseInt(strArr.join(""));
+      } else {
+        result = 0;
+      }
+      return {
+        total: result,
+        next: null,
+        operation: null,
+        tempOp: false,
+      };
     case "RESET":
       return {
         total: 0,
