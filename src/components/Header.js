@@ -18,11 +18,11 @@ const Header = () => {
       <div className="header-toggle">
         <span className="theme-label">THEME</span>
         <div className="slidecontainer">
-          <div className="slider-labels">
+          <label className="slider-labels">
             <span>1</span>
             <span>2</span>
             <span>3</span>
-          </div>
+          </label>
           <input
             type="range"
             min="0"
