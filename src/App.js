@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Display from "./components/Display";
 import ButtonPanel from "./components/ButtonPanel";
 import calculate from "./logic/calculate";
-import { Component, useState } from "react";
+import { Component } from "react";
 
 class App extends Component{
   constructor(props) {
