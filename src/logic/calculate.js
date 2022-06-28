@@ -6,6 +6,14 @@ const calculate = (data, btnName) => {
   switch (btnName) {
     case "DEL":
       let result = total;
+      if (!total) {
+        return {
+          total: 0,
+          next: null,
+          operation: null,
+          tempOp: false,
+        };
+      }
       if (total.toString().length > 1) {
         let strArr = total.toString().split("");
         strArr.pop();
