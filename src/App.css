@@ -92,8 +92,7 @@ body {
   font-weight: 700;
   padding: 24px;
   width: 100%;
-  min-width: 300px;
-  /* max-width: 375px; */
+  min-width: 375px;
   height: 667px;
   position: absolute;
   top: 50%;
@@ -171,7 +170,6 @@ body {
 
 .display {
   background-color: var(--display-bg);
-  /* width: 327px; */
   width: 100%;
   height: 88px;
   border-radius: 10px;
@@ -189,7 +187,6 @@ body {
 }
 
 .buttons {
-  /* width: 327px; */
   width: 100%;
   height: 420px;
   background-color: var(--keypad-bg);
@@ -203,7 +200,6 @@ body {
 
 .button {
   font-family: "League Spartan", sans-serif;
-  /* width: 60px; */
   width: 100%;
   height: 64px;
   background-color: var(--key-bg-light);
@@ -235,7 +231,6 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100%;
-  /* width: 133px; */
   font-size: 20px;
   background-color: var(--key-bg);
   color: var(--text-light);
@@ -251,7 +246,6 @@ body {
 .equals-btn {
   grid-column-start: 3;
   grid-column-end: 5;
-  /* width: 133px; */
   width: 100%;
   font-size: 20px;
   background-color: var(--key-bg-two);
@@ -270,9 +264,10 @@ body {
   background-color: var(--hover-secondary);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 576px) {
   .App {
     max-width: 564px;
+
     height: 706px;
   }
 
