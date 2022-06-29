@@ -42,7 +42,6 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [big.js](https://www.npmjs.com/package/big-js) - A small, fast JavaScript library for arbitrary-precision decimal arithmetic.
-- [Styled Components](https://styled-components.com/)
 
 
 ### Useful resources
