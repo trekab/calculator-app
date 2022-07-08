@@ -1,4 +1,4 @@
-# Frontend Mentor - Calculator app solution
+# Calculator app
 
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -42,7 +42,6 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [big.js](https://www.npmjs.com/package/big-js) - A small, fast JavaScript library for arbitrary-precision decimal arithmetic.
-- [Styled Components](https://styled-components.com/)
 
 
 ### Useful resources
