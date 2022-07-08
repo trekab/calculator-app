@@ -5,7 +5,7 @@ import ButtonPanel from "./components/ButtonPanel";
 import calculate from "./logic/calculate";
 import { Component } from "react";
 
-class App extends Component{
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,25 +14,27 @@ class App extends Component{
       operation: null,
     };
 
-    this.handleClick = buttonName => {
-      this.setState(previousState => calculate(previousState, buttonName));
+    this.handleClick = (buttonName) => {
+      this.setState((previousState) => calculate(previousState, buttonName));
     };
   }
 
   render() {
     const { total, next } = this.state;
     let result = next ? next : total;
-    if(!total){
+    if (!total) {
       result = 0;
     }
     return (
       <div className="App">
-        <Header />
-        <Display result={`${result}`} />
-        <ButtonPanel clickHandler={this.handleClick} />
+        <div className="wrapper">
+          <Header />
+          <Display result={`${result}`} />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
       </div>
     );
   }
-} 
+}
 
 export default App;
