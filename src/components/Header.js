@@ -13,17 +13,18 @@ const Header = () => {
   });
 
   return (
-    <div className="header">
+    <header className="header">
       <h1>calc</h1>
       <div className="header-toggle">
         <span className="theme-label">THEME</span>
         <div className="slidecontainer">
-          <label className="slider-labels">
+          <label className="slider-labels" htmlFor="theme">
             <span>1</span>
             <span>2</span>
             <span>3</span>
           </label>
           <input
+            id="theme"
             type="range"
             min="0"
             max="2"
@@ -33,7 +34,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

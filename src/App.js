@@ -29,8 +29,10 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <Header />
-          <Display result={`${result}`} />
-          <ButtonPanel clickHandler={this.handleClick} />
+          <main>
+            <Display result={`${result}`} />
+            <ButtonPanel clickHandler={this.handleClick} />
+          </main>
         </div>
       </div>
     );
